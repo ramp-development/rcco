@@ -90,7 +90,7 @@ export const contact = (config: Config) => {
       for (const mutation of mutationList) {
         if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
           if (mutation.target.style.display === 'none') return;
-          dataLayer({ form_submit: 'contact' });
+          dataLayer({ event: 'form_submit' });
         }
       }
     };
